@@ -44,6 +44,9 @@ python3 nagoyaspray.py -h
 ```
 
 ## Usage
+
+![nagoyaspray.py](https://github.com/strikoder/NagoyaSpray/blob/main/nagoyaspray.gif)
+
 ```bash
 # No arguments? See the help
 python3 nagoyaspray.py
