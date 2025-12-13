@@ -24,6 +24,11 @@ Built with cert labs in mind (OSCP, PNPT, CPTS) but works anywhere you need clea
 - Any time you need realistic date-based passwords
 
 ## Installation (No requirements needed!!)
+**Install through pip**
+```
+pip install nagoyaspray
+```
+
 **Clone the repo:**
 ```bash
 git clone https://github.com/strikoder/NagoyaSpray.git
