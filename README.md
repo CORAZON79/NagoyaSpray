@@ -26,7 +26,12 @@ Built with cert labs in mind (OSCP, PNPT, CPTS) but works anywhere you need clea
 ## Installation (No requirements needed!!)
 **Install through pip**
 ```
-pip install nagoyaspray
+pip3 install nagoyaspray
+```
+
+**Install through pipx**
+```
+pipx install nagoyaspray
 ```
 
 **Clone the repo:**
